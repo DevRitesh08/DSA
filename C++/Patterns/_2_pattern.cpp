@@ -13,7 +13,7 @@ void pattern1(int n)
     {
         for(int j = 0 ; j <= i ;j++)
         {
-            cout<<i+1<<" ";
+            cout<<j+1<<" ";
         }
         cout<<endl;
     }
