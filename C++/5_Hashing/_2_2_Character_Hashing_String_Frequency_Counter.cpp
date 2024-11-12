@@ -10,7 +10,7 @@ int main()
     //precompute:
     int hash[256] = {0};
 
-    for (int i = 0; i < s.size() ; i++) 
+    for (int i = 0; i < s.size() ; i++) // s.size() in this case is 256
     {
         hash[s[i]] ++ ;
     }

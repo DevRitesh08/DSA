@@ -10,7 +10,7 @@ int main()
     //precompute:
     int hash[26] = {0};
 
-    for (int i = 0; i < 26 ; i++) 
+    for (int i = 0; i < s.size() ; i++)  // s.size() in this case is 26
     {
         hash[s[i] - 'a'] += 1;
     }

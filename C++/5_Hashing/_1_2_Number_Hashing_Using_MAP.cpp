@@ -15,7 +15,7 @@ int main()
     }
 
     //precompute:
-    map<int, int> mp;
+    map<int, int> mp; // can also use unordered map . just change name
     for (int i = 0; i < n; i++) 
     {
         mp[arr[i]]++;
