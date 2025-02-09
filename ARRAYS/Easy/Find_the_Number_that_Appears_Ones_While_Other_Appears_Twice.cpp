@@ -5,30 +5,30 @@ using namespace std;
 // Time complexity is O(n^2) where n is the size of the array.
 // space complexity is O(1) as we are not using any extra space.
 
-// int main()
-// {
-//     int arr[] = {1,2,3,6,5,9,8,1,2,3,6,5,9};
-//     int n = sizeof(arr)/sizeof(arr[0]);
-//     int num;
-//     int count;
-//     for(int i = 0 ; i < n ; i++)
-//     {
-//         count = 0;
-//         num = arr[i];
-//         for(int j = 0 ; j < n ; j++)
-//         {
-//             if(arr[j] == num)
-//             {
-//                 count++;
-//             }
-//         }
-//         if(count == 1)// for rest of the elements count will be 2
-//         {
-//             cout<<"The number that appears once is : "<<num;
-//             break;
-//         }
-//     }
-// }
+int main()
+{
+    int arr[] = {1,2,3,6,5,9,8,1,2,3,6,5,9};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int num;
+    int count;
+    for(int i = 0 ; i < n ; i++)
+    {
+        count = 0;
+        num = arr[i];
+        for(int j = 0 ; j < n ; j++)
+        {
+            if(arr[j] == num)
+            {
+                count++;
+            }
+        }
+        if(count == 1)// for rest of the elements count will be 2
+        {
+            cout<<"The number that appears once is : "<<num;
+            break;
+        }
+    }
+}
 
 
 
@@ -70,17 +70,17 @@ using namespace std;
 // space complexity is O(1) as we are not using any extra space.
 
 
-int main()
-{
-    int arr[] = {1,2,3,6,5,9,8,1,2,3,6,5,9};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    int xor1 = 0;
-    for(int i = 0 ; i < n ; i++)
-    {
-        xor1 = xor1 ^ arr[i];
-    }
+// int main()
+// {
+//     int arr[] = {1,2,3,6,5,9,8,1,2,3,6,5,9};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int xor1 = 0;
+//     for(int i = 0 ; i < n ; i++)
+//     {
+//         xor1 = xor1 ^ arr[i];
+//     }
 
-    cout<<"The number that appears once is : "<<xor1;
+//     cout<<"The number that appears once is : "<<xor1;
 
-    return 0;
-}
+//     return 0;
+// }
