@@ -94,3 +94,13 @@ int main()
 
 // Time Complexity: O(N*logN) where N = size of the array.
 // Space Complexity: O(1) as we are not using any extra space.
+
+// Brute-force and hashing approaches find all possible pairs, including those that might involve the same number at different positions.
+// The two-pointer approach finds unique pairs and doesn't account for multiple occurrences of the same number unless explicitly handled.
+
+// reasons explained below:
+
+// 1. Sorting Changes the Original Indices
+// In the brute-force and hashing approaches, the array remains unsorted, and you are directly comparing elements while retaining their original indices. However, in the optimized approach, you sort the array first, which rearranges the elements and loses the connection to their original indices.Now, when you're using the two-pointer approach on the sorted array, you're referring to the sorted indices rather than the original indices.
+// 2. Skipping Duplicate Pairs
+// In the optimized approach, when you find a pair that sums to the target, you increment start++ and decrement end-- immediately: This skips over duplicate values, which would otherwise form valid pairs in the brute-force or hashing approaches. For example, if multiple 1s and 2s exist in the array, the brute-force and hashing approaches will find all possible combinations, but the optimized approach will skip over them once a pair is found.
