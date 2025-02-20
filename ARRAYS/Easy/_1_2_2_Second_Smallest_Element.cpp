@@ -33,8 +33,8 @@ using namespace std;
 
 int main()
 {
-    int arr[]= {1,2,3,4,5,9,6,3,10};
-    int n = 9 ;
+    int arr[]= {9,6,7,8,1,3};
+    int n = 6 ;
     int smallest = arr[0];
     int Ssmallest = 100000;      // assuming that all the array elements are positive .
     
@@ -44,6 +44,11 @@ int main()
         {
             Ssmallest = smallest ;
             smallest = arr[i];
+        }
+
+        else if(arr[i] > smallest && arr[i] < Ssmallest)
+        {
+            Ssmallest = arr[i];  // Update second smallest if it's greater than smallest
         }
     }
 
