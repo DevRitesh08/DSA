@@ -59,6 +59,9 @@ void transpose(int matrix[][N])
 //     }
 // }
 
+// Time complexity: O(n*m) for traversing
+// Space complexity: O(1)
+
 
 int main() 
 {
