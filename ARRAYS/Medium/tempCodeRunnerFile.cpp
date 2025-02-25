@@ -1,33 +1,20 @@
 
+int subarraysWithXorK(vector<int> a, int k) {
+    int n = a.size(); //size of the given array.
+    int cnt = 0;
 
-vector<vector<int>> triplet(int n, vector<int> &arr) {
-    vector<vector<int>> ans;
-    sort(arr.begin(), arr.end());
+    // Step 1: Generating subarrays:
     for (int i = 0; i < n; i++) {
-        //remove duplicates:
-        if (i != 0 && arr[i] == arr[i - 1]) continue;
+        int xorr = 0;
+        for (int j = i; j < n; j++) {
 
-        //moving 2 pointers:
-        int j = i + 1;
-        int k = n - 1;
-        while (j < k) {
-            int sum = arr[i] + arr[j] + arr[k];
-            if (sum < 0) {
-                j++;
-            }
-            else if (sum > 0) {
-                k--;
-            }
-            else {
-                vector<int> temp = {arr[i], arr[j], arr[k]};
-                ans.push_back(temp);
-                j++;
-                k--;
-                //skip the duplicates:
-                while (j < k && arr[j] == arr[j - 1]) j++;
-                while (j < k && arr[k] == arr[k + 1]) k--;
-            }
+            //step 2:calculate XOR of all
+            // elements:
+            xorr = xorr ^ a[j];
+
+            // step 3:check XOR and count:
+            if (xorr == k) cnt++;
         }
     }
-    return ans;
+    return cnt;
 }
