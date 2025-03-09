@@ -7,7 +7,7 @@ using namespace std;
 
 
 // Power exponential method:
-long long func(int b, int exp) 
+long long func(int b, int exp) // O(log exp) => O(log n) , as exp is n here.
 {
     long long  ans = 1;
     long long base = b;
@@ -53,9 +53,11 @@ int NthRoot(int n, int m)
 //return 1, if == m:
 //return 0, if < m:
 //return 2, if > m:
-int func(int mid, int n, int m) {
+int func(int mid, int n, int m) 
+{
     long long ans = 1;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) 
+    {
         ans = ans * mid;
         if (ans > m) return 2;
     }
@@ -63,10 +65,12 @@ int func(int mid, int n, int m) {
     return 0;
 }
 
-int NthRoot(int n, int m) {
+int NthRoot(int n, int m) 
+{
     //Use Binary search on the answer space:
     int low = 1, high = m;
-    while (low <= high) {
+    while (low <= high) 
+    {
         int mid = (low + high) / 2;
         int midN = func(mid, n, m);
         if (midN == 1) {
