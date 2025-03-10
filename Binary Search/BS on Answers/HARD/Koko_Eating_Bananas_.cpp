@@ -49,7 +49,7 @@ int minimumRateToEatBananas(vector<int> v, int h)
     //Find the minimum value of k:
     for (int i = 1; i <= maxi; i++) // O(maxi)*O(N)
     {
-        int reqTime = calculateTotalHours(v, i);// this function will take O(N) time , so the total time complexity will be O(maxi*N)
+        int reqTime = calculateTotalHours(v, i);// this function will take O(N) time , so the total time complexity will be  O(maxi*N)
         if (reqTime <= h) 
         {
             return i;

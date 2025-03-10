@@ -35,7 +35,7 @@ bool possible(vector<int> &arr, int day, int m, int k)
 
 int roseGarden(vector<int> arr, int k, int m) 
 {
-    long long val = (long long)m * k ; // can also do like this : long long val = m * 1ll * k * 1ll; here 1ll is used to convert m and k to long long.
+    long long val = (long long)m * (long long)k ; // can also do like this : long long val = m * 1ll * k * 1ll; here 1ll is used to convert m and k to long long.
     int n = arr.size(); //size of the array
     if (val > n) return -1; //impossible case.
     //find maximum and minimum:
