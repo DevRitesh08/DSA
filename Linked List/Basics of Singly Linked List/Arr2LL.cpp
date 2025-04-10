@@ -12,6 +12,16 @@ class Node{
             }
 };
 
+void print(Node* head)
+{
+    while(head != nullptr)
+    {
+        cout<<head->data<<"  ";
+        head = head -> next ;
+    }
+    cout<<endl; 
+}
+
 Node* Arr2LL(vector <int> &arr){
     Node* head = new Node(arr[0]);
     Node* mover = head ;
@@ -32,5 +42,6 @@ int main()
 {
     vector <int> arr = {2,3,5,7,9} ; 
     Node* head = Arr2LL(arr);
-    cout<< head->data ;
+    cout<< head->data<<endl ;
+    print(head);
 }
