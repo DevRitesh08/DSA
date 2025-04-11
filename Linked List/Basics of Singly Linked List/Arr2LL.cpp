@@ -14,8 +14,8 @@ class Node{
 
 void print(Node* head)
 {
-    while(head != nullptr)
     {
+    while(head != nullptr)
         cout<<head->data<<"  ";
         head = head -> next ;
     }

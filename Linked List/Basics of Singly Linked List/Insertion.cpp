@@ -54,6 +54,7 @@ Node* Inserion_of_Head(Node* head)
     }
 
 
+
     Node* temp = new Node( val , head) ;
 
     return temp; // as now it is the new head of Linked List .
@@ -83,10 +84,10 @@ Node* Inserion_of_Tail(Node* head)
     {
         temp = temp->next ;
     }
-    Node* newNode = new Node( val ) ; //  Node* newNode = new Node( val , nullptr ) ; noneed since we have 2  constructors and second only directly points to nullptr.
-    temp->next = newNode ;
+    Node* newNode = new Node( val ) ; //  Node* newNode = new Node( val , nullptr ) ; no need since we have 2  constructors and second only directly points to nullptr.
+    temp->next = newNode ; // linking the last node that is temp with the inserted tail ==> newNode .
 
-    return head; // as now it is the new head of Linked List .
+    return head; 
 }
 
 // Time complexity will be O(N) .
@@ -131,9 +132,8 @@ Node* Insertion_at_kth(Node* head)
         temp = temp->next ;
     }
 
-    return head; // as now it is the new head of Linked List .
+    return head; 
 }
-
 // Time complexity will be O(K) .
 
 
@@ -177,7 +177,7 @@ Node* Inserion_before_value(Node* head)
         temp = temp->next ;
     }
 
-    return head; // as now it is the new head of Linked List .
+    return head;  
 }
 
 // Time complexity will be O(val - 1) .
@@ -188,15 +188,15 @@ int main()
     Node* head = Arr2LL(arr);
 
     // head = Inserion_of_Head(head);
-    // print(head);
-    
+  
     // head = Inserion_of_Tail(head);
-    // print(head);
     
     // head = Insertion_at_kth(head);
-    // print(head);
-    
+ 
     head = Inserion_before_value(head);
+    
+
     print(head);
+    
 
 }

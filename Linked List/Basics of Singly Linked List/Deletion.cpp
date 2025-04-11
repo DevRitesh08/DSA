@@ -58,7 +58,7 @@ void print(Node* head)
 
 Node* Deletion_of_Head(Node* head)
 {
-    if(head == nullptr)     return head ;// nth to delete !!
+    if(head == nullptr)     return head ;// nth to delete !! , If the list is already empty, there's no node to delete, so we simply return the original head (which is already nullptr).
     Node* temp = head;
     head = head->next ;
     free(temp) ; // or delete temp ;   ==> in java garbage collector deals with it so there is no need to worry about this there .
@@ -125,11 +125,11 @@ Node* Deletion_of_Kth(Node* head)
     
 }
 
-// Time complexity will be O(K) .
+// Time complexity will be O(N) , since in worst case the loop will run for n times , where n is the number of nodes in the LL .
 
 
 
-// Deletion of Kth node by value .
+// Deletion of K node by value .
 
 Node* Deletion_by_value(Node* head)
 {
