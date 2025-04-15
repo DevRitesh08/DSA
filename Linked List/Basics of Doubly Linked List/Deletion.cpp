@@ -98,6 +98,7 @@ Node* deletion_of_tail(Node* head)
 
 
 // Deletion of Kth node of doubly linked list .
+// k lies between 1 to n  (1 based indexing )
 
 Node* deletion_of_Kth_Node(Node* head)
 {
@@ -148,66 +149,101 @@ Node* deletion_of_Kth_Node(Node* head)
     kNode -> next = nullptr ;
     kNode -> back = nullptr ;
     delete kNode ;
+    // ...is technically unnecessary and could even be removed without changing the behavior of the function as long as you’re not accessing kNode after deleting it.
+    // but still it's necessary to set kNode->next = nullptr and kNode->back = nullptr before deleting the node in a doubly linked list because of  Safety (in debugging or later use) , Code conventions / clarity .
 
     return head ;
 
 }
 
-// Deletion of K node of doubly linked list (by value) ==> but here that node won't be the head node , as for that more conditions have to be written 
+// Time complexity will be O(N) , where N  is the number of elements in the doubly linked list .
 
-// ERROR NOT COMPLETE
+
+
+
+// Deletion of K node of doubly linked list (by value) 
 
 Node* deletion_of_K_Node(Node* head)
 {
-    int k;
-    cout<<"Enter the kth node to delete : ";
-    cin>>k;
+    int val;
+    cout << "Enter the value of node to delete: ";
+    cin >> val;
 
-    if (head == nullptr) 
+    if (head == nullptr)
     {
         cout << "List is empty." << endl;
         return head;
     }
 
-    Node* temp = head ;
-    
-    Node* prev = temp -> back ;
-    Node* front = temp -> next ;
+    Node* kNode = head;
 
-    if(front == nullptr)
+    // Traverse the list to find the node with the given value
+    while (kNode != nullptr)
     {
-        prev -> next = nullptr ;
-        temp -> back == nullptr ;
-        delete temp ;
-        return head ;
+        if (kNode->data == val)
+            break;
+        kNode = kNode->next;
     }
 
-    prev -> next = front ;
-    front -> back = prev ;
+    // Value not found
+    if (kNode == nullptr)
+    {
+        cout << "Value not found in the list." << endl;
+        return head;
+    }
 
-    temp -> next = temp -> back = nullptr ;
-    delete temp ;
+    Node* prev = kNode->back;
+    Node* front = kNode->next;
 
-    return head ;
+    // Only one node in the list
+    if (prev == nullptr && front == nullptr)
+    {
+        delete kNode;
+        return nullptr;
+    }
+    // Deleting the head node
+    else if (prev == nullptr)
+    {
+        front->back = nullptr;
+        kNode->next = nullptr;
+        delete kNode;
+        return front; // new head
+    }
+    // Deleting the tail node
+    else if (front == nullptr)
+    {
+        prev->next = nullptr;
+        kNode->back = nullptr;
+        delete kNode;
+        return head;
+    }
 
+    // Deleting a middle node
+    prev->next = front;
+    front->back = prev;
+
+    kNode->next = nullptr;
+    kNode->back = nullptr;
+    delete kNode;
+
+    return head;
 }
+
 
 
 int main()
 {
-    vector <int> arr = {1,2,3,4,5,6,7,8,9};
+    vector <int> arr = {3,12,45,1,7,78,1,4,121,767};
     Node* head = Arr2DLL(arr);
     
     // head = deletion_of_head(head) ;
-    // print(head);
 
     // head = deletion_of_tail(head) ;
-    // print(head);
 
     // head = deletion_of_Kth_Node(head) ;
-    // print(head);
 
     head = deletion_of_K_Node(head) ;
+    
     print(head);
 
     return 0 ;
