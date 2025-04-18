@@ -25,46 +25,43 @@ public:
 
 // Brute solution (Hashing)
 
-// int lengthOfLoop(Node* head) 
-// {
-//     // Hashmap to store visited
-//     // nodes and their timer values
-//     unordered_map<Node*, int> visitedNodes; 
-//     Node* temp = head; 
+int lengthOfLoop(Node* head) 
+{
+    // Hashmap to store visited
+    // nodes and their timer values
+    unordered_map<Node*, int> visitedNodes; 
+    Node* temp = head; 
     
-//     // Initialize timer to track
-//     // visited nodes
-//     int timer = 0; 
+    // Initialize timer to track
+    // visited nodes
+    int timer = 0; 
 
-//     while (temp != NULL) 
-//     {
+    while (temp != NULL) 
+    {
         
-//         // If revisiting a node return
-//         // the difference of timer values
-//         if (visitedNodes.find(temp) != visitedNodes.end()) 
-//         {
-//             // Calculate the length of the loop
-//             int loopLength = timer - visitedNodes[temp];
+        // If revisiting a node return
+        // the difference of timer values
+        if (visitedNodes.find(temp) != visitedNodes.end()) 
+        {
+            // Calculate the length of the loop
+            int loopLength = timer - visitedNodes[temp];
             
-//             // Return the length of the loop
-//             return loopLength; 
-//         }
-//         // Store the current node and
-//         // its timer value in the hashmap
-//         visitedNodes[temp] = timer;
+            // Return the length of the loop
+            return loopLength; 
+        }
+        // Store the current node and
+        // its timer value in the hashmap
+        visitedNodes[temp] = timer;
         
-//         // Move to the next node
-//         temp = temp->next;
+        // Move to the next node
+        temp = temp->next;
         
-//          // Increment the timer
-//         timer++;
-//     }
-
-//     // If traversal is completed and
-//     // we reach the end of the list (null)
-//     // means there is no loop
-//     return 0;
-// }
+         // Increment the timer
+        timer++;
+    }
+    
+    return 0;    // means there is no loop
+}
 
 // Time complexity is O(N) and space complexity is also O(N) .
 
@@ -102,6 +99,7 @@ int lengthOfLoop(Node* head)
     return 0 ;
 }
 
+// Time complexity is O(N) .
 
 
 int main() 
