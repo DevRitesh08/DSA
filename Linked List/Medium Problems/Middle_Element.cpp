@@ -94,7 +94,7 @@ Node* middleElement(Node* head)
 // Time complexity is O(N/2) . 
 
 
-// Follow up question ==> delete the middle node then remember we have to reach the previous node of middle node hence for brute force use N/2 instead of (N/2 + 1) and then delete the next node (mid node) and link the prev and forward nodes , now for optimal approach take one more ptr prev firstly assign it to nullptr and then in loop before moving the slow ptr store its value in prev then just repeat the steps delete and join links .
+// Follow up question ==> delete the middle node then remember we have to reach the previous node of middle node hence for brute force use N/2 instead of (N/2 + 1) and then delete the next node (mid node) and link the prev and forward nodes , now for optimal approach take one more ptr prev firstly assign it to nullptr (or we can skip one iteration of slow by making one iteration of fast before the loop (eg. fast = fast -> next -> next ; and then the rest loop and stuff ))and then in loop before moving the slow ptr store its value in prev then just repeat the steps delete and join links .
 
 
 int main()
