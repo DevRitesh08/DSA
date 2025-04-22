@@ -75,7 +75,6 @@ Node* Add_2_Numbers(Node* head1 , Node* head2)
     }
 
     return dummynode->next ;
-
 }
 
 // Time complexity will be O(max(M,N))
@@ -86,7 +85,7 @@ int main()
 {
     vector <int> arr1 = {8,9} ; // this is 98 in linked list as we have stored in reverse 
     vector <int> arr2 = {1,2} ; // this is 21 in linked list as we have stored in reverse
-    // hence the output should be 119
+    // hence the output is also in reverse  911
     Node* head1 = Arr2DLL(arr1);
     Node* head2 = Arr2DLL(arr2);
 
