@@ -60,7 +60,7 @@ Node* RemoveDuplicates(Node* head)
         Node* nextNode = temp -> next ;
         while(nextNode != nullptr && nextNode ->data == temp -> data)
         {
-            Node* duplicate = nextnode ;
+            Node* duplicate = nextNode ;
             nextNode = nextNode -> next ;
             delete duplicate ;
         }
