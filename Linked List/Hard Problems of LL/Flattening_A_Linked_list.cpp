@@ -78,7 +78,7 @@ void printOriginalLinkedList(Node* head, int depth)
 }
 
 
-// optimal Solution : (using recursion)
+// optimal Solution : (using recursion) 
 
 Node* flatten(Node* head) 
 {
@@ -111,8 +111,10 @@ Node* flatten(Node* head)
     }
 
     return head ;
- }
+}
 
+// Time complexity is O(N) , where N is the number of nodes in the linked list.
+// Space complexity is O(N) , for the recursion stack space. 
 
 int main() {
     // Create a linked list with child pointers

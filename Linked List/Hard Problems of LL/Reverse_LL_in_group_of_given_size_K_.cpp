@@ -184,11 +184,13 @@ Node* kReverse(Node* head, int k)
 // using recursion :
 
 
-ListNode* reverseKGroup(ListNode* head, int k) {
+ListNode* reverseKGroup(ListNode* head, int k) 
+{
     // Count total nodes in the current segment
     ListNode* temp = head;
     int count = 0;
-    while (temp != nullptr && count < k) {
+    while (temp != nullptr && count < k) 
+    {
         temp = temp->next;
         count++;
     }
@@ -200,7 +202,8 @@ ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode* next = nullptr;
         int c = 0;
 
-        while (curr != nullptr && c < k) {
+        while (curr != nullptr && c < k) 
+        {
             next = curr->next;
             curr->next = prev;
             prev = curr;
@@ -209,7 +212,8 @@ ListNode* reverseKGroup(ListNode* head, int k) {
         }
 
         // Recurse on the remaining list
-        if (next != nullptr) {
+        if (next != nullptr) 
+        {
             head->next = reverseKGroup(next, k);
         }
 
