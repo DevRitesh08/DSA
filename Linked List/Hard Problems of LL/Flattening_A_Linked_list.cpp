@@ -78,6 +78,8 @@ void printOriginalLinkedList(Node* head, int depth)
 }
 
 
+
+
 // optimal Solution : (using recursion) 
 
 Node* flatten(Node* head) 

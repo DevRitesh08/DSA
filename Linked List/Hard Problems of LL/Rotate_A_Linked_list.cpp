@@ -38,6 +38,10 @@ Node* Arr2LL(vector <int> &arr)
     return head;    // since in LL head is the key to whole LL .
 }
 
+
+
+
+
 //  Brute Force Approach :
 
 Node* findNthNode(Node* temp , int k)

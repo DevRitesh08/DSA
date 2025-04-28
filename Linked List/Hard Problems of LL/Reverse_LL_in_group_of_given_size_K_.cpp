@@ -45,14 +45,12 @@ Node* Arr2LL(vector <int> &arr)
 
 
 
-// Brute Force :
+// Optimal Solution 2 :
 
 // Function to reverse a linked list
 // using the 3-pointer approach
 Node* reverseLinkedList(Node *head)
 {
-   // Initialize'temp' at
-   // head of linked list
    Node* temp = head;  
    
    // Initialize pointer 'prev' to NULL,
@@ -112,12 +110,10 @@ Node* getKthNode(Node* temp, int k)
 // Function to reverse nodes in groups of K
 Node* kReverse(Node* head, int k)
 {
-    // Initialize a temporary
-    // node to traverse the list
     Node* temp = head; 
 
     // Initialize a pointer to track the
-    // ;ast node of the previous group
+    // last node of the previous group
     Node* prevLast = NULL; 
     
     // Traverse through the linked list
@@ -179,10 +175,14 @@ Node* kReverse(Node* head, int k)
     return head; 
 }
 
+// Time Complexity: O(2N) The time complexity consists of actions of reversing segments of K and finding the Kth node which operates in linear time. Thus, O(N) + O(N) = O(2N), which simplifies to O(N).
 
 
-// using recursion :
 
+
+
+
+// Optimal Solution 2 : (using recursion) 
 
 ListNode* reverseKGroup(ListNode* head, int k) 
 {
@@ -196,7 +196,8 @@ ListNode* reverseKGroup(ListNode* head, int k)
     }
 
     // If there are at least k nodes, proceed to reverse
-    if (count == k) {
+    if (count == k) 
+    {
         ListNode* curr = head;
         ListNode* prev = nullptr;
         ListNode* next = nullptr;
