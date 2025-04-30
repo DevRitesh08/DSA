@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// ​In C++, the Standard Library provides the isalnum() function to check whether a character is alphanumeric—that is, whether it is a letter (uppercase or lowercase) or a digit.
+
 bool isalphanum(char ch)
 {
     if ((ch >= '0' && ch <= '9') || (tolower(ch) >= 'a' && tolower(ch) <= 'z'))
