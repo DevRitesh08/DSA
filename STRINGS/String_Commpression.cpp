@@ -5,17 +5,20 @@ using namespace std;
 
 
 // Function to compress the vector of characters
-int compress(vector<char>& chars) {
+int compress(vector<char>& chars) 
+{
     int n = chars.size();  // Total number of characters in the input
     int idx = 0;           // Index to store the compressed characters
 
     // Traverse the input characters
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         char ch = chars[i];   // Current character
         int count = 0;        // Count occurrences of the current character
 
         // Count how many times the same character repeats consecutively
-        while (i < n && chars[i] == ch) {
+        while (i < n && chars[i] == ch) 
+        {
             count++;
             i++;
         }
@@ -24,7 +27,8 @@ int compress(vector<char>& chars) {
         chars[idx++] = ch;
 
         // If the character appears more than once, add its count as string
-        if (count > 1) {
+        if (count > 1) 
+        {
             string str = to_string(count);  // Convert count to string
             for (char dig : str) {
                 chars[idx++] = dig;        // Add each digit of count separately
@@ -39,12 +43,13 @@ int compress(vector<char>& chars) {
     return idx; // Return the length of the compressed array
 }
 
-// Time complexity is O(N) .
+// Time complexity is O(N) , not O(N^2) as both loops are incrementing i , so they are not nested .
 
 
 
 
-int main() {
+int main() 
+{
     string input;
     cout << "Enter characters (no space, e.g. aabccc): ";
     cin >> input;
@@ -57,7 +62,8 @@ int main() {
 
     // Output result
     cout << "Compressed characters: ";
-    for (char c : chars) {
+    for (char c : chars) 
+    {
         cout << c;
     }
     cout << "\nLength of compressed array: " << newLength << endl;
