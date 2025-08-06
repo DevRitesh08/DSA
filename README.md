@@ -31,5 +31,12 @@ This repository contains my personal preparation and practice material for maste
    ```bash
    git clone https://github.com/DevRitesh08/DSA.git
 
+## 📄 License
 
-📄 License: [MIT](LICENSE)
+This project is licensed under the [Apache License 2.0](LICENSE).
+
+### 🧾 Attribution Requirement
+
+If you use or reference this code in any form (project, blog, research, etc.), you **must** provide proper credit by:
+- Mentioning the author: [Ritesh Swami](https://github.com/DevRitesh08)
+- Including a link to this repository
