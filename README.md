@@ -1,1 +1,35 @@
+# 🧠 DSA Preparation in C++
+
+This repository contains my personal preparation and practice material for mastering **Data Structures and Algorithms (DSA)** using **C++**. It includes hands-on implementations of fundamental data structures, algorithms, and popular problems frequently asked in coding interviews.
+
+---
+
+## 📁 Folder Structure
+
+- **ARRAYS** – Basic to advanced problems and techniques involving arrays.
+- **Binary Search** – Binary search and its advanced applications.
+- **C++** – Language-specific snippets, templates, and helper utilities.
+- **Leetcode** – My solutions to selected Leetcode problems.
+- **Linked List** – All operations and variations of singly, doubly, and circular linked lists.
+- **STRINGS** – String manipulation problems and pattern-based solutions.
+- **Stack and Queues/WW_Questions** – Stack/queue implementations and tricky interview-level questions.
+
+---
+
+## 🚀 Features
+
+- ✅ Clean and readable C++ implementations
+- ✅ Interview-level questions and edge-case handling
+- ✅ Regularly updated as I practice more
+- ✅ Structured folder system for topic-wise prep
+
+---
+
+## 🛠️ How to Use
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DevRitesh08/DSA.git
+
+
 📄 License: [MIT](LICENSE)
