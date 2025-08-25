@@ -25,6 +25,20 @@ This repository contains my personal preparation and practice material for maste
 
 ---
 
+## 📊 GitHub Stats
+
+<div align="center">
+  
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/card?user=DevRitesh08&theme=dark&hide_border=true)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=dark&hide_border=true&count_private=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=DevRitesh08&layout=compact&theme=dark&hide_border=true)
+
+</div>
+
+---
+
 ## 🛠️ How to Use
 
 1. Clone the repository:
