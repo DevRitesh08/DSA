@@ -28,6 +28,10 @@ This repository contains my personal preparation and practice material for maste
 ## 📊 GitHub Stats
 
 <div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=DevRitesh08&color=blue&style=flat-square&label=Profile+Views)
+
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=dark&no-frame=true&no-bg=true&margin-w=4)
   
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/card?user=DevRitesh08&theme=dark&hide_border=true)
 
